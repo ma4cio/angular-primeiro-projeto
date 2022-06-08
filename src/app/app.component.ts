@@ -1,11 +1,11 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnChanges, OnInit, SimpleChanges  } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { TitleStrategy } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   template: `
      
-     <app-title ></app-title>     
+    <app-data-binding></app-data-binding> 
     <router-outlet></router-outlet>`
 })
 
