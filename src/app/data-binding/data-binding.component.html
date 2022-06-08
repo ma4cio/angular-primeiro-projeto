@@ -16,3 +16,11 @@
 <button (click)="alertaInfo($event)">Evento</button>
 <div (mousemove)="mouseMoveTeste($event)" style="background: red; width: 300px; height: 300px"></div>
 {{ position.x }} - {{ position.y }}
+
+<br>
+<br>
+<h1>Two-way Binding</h1>
+<em>Bastante usado para validações </em>
+<br>
+<input [(ngModel)]="nome">
+{{ nome }}
