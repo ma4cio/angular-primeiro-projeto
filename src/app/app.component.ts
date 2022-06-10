@@ -8,8 +8,9 @@ import { TitleStrategy } from '@angular/router';
          <!-- <app-diretivas-atributos>
            <h1>Aula de Diretivas de Atributos</h1>
            <hr>
-         </app-diretivas-atributos> -->
-         <app-diretivas-atributos></app-diretivas-atributos>
+         </app-diretivas-atributos> 
+         <app-diretivas-atributos></app-diretivas-atributos>-->
+         <app-new-component></app-new-component>
          <router-outlet></router-outlet>`
 })
 
