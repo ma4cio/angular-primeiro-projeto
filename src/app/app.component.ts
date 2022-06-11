@@ -15,14 +15,17 @@ import { TitleStrategy } from '@angular/router';
          <app-input [contador]="addValue"></app-input>
          <br>
          <button (click)="add()">Add</button>--> 
-
-         <app-output></app-output>
+         <ng-template [ngIf]="getDados">
+          <h1>{{ getDados.nome }}  {{ getDados.idade }}</h1> 
+         </ng-template>
+         <app-output (enviarDados)="setDados($event)"></app-output>
          <router-outlet></router-outlet>` 
 })
 
 export class AppComponent implements OnInit {
   
   public addValue: number = 0;
+  public getDados: {nome: string, idade: number} | undefined;
 
   constructor(){ }
     ngOnInit(): void {
@@ -34,6 +37,9 @@ export class AppComponent implements OnInit {
 
   public add(){
       this.addValue++;    
+  }
+  public setDados(event:{nome: string, idade: number}){
+    this.getDados = event;
   }
 
 }

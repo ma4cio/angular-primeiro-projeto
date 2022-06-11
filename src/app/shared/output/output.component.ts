@@ -9,7 +9,7 @@ export class OutputComponent implements OnInit {
 
   @Output() public enviarDados = new EventEmitter();
   
-  public list: Array<{nome:string, idade:number}>=[
+  public list: Array<{nome: string, idade: number}>=[
     {nome: "Márcio Lima", idade: 42},
     {nome: "Tatiane Lima", idade: 32},
     {nome: "Cauã Lima", idade: 5},
@@ -22,7 +22,7 @@ export class OutputComponent implements OnInit {
   }
 
   getDados(event: number){
-    this.enviarDados.emit(this.list[event])   
+    this.enviarDados.emit(this.list[event]);  
   }
 
 }
