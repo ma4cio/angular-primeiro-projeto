@@ -10,12 +10,14 @@ import { TitleStrategy } from '@angular/router';
            <hr>
          </app-diretivas-atributos> 
          <app-diretivas-atributos></app-diretivas-atributos>      
-         <app-new-component></app-new-component>-->   
+         <app-new-component></app-new-component> 
 
          <app-input [contador]="addValue"></app-input>
          <br>
-         <button (click)="add()">Add</button>
-         <router-outlet></router-outlet>`
+         <button (click)="add()">Add</button>--> 
+
+         <app-output></app-output>
+         <router-outlet></router-outlet>` 
 })
 
 export class AppComponent implements OnInit {
