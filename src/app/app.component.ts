@@ -9,13 +9,19 @@ import { TitleStrategy } from '@angular/router';
            <h1>Aula de Diretivas de Atributos</h1>
            <hr>
          </app-diretivas-atributos> 
-         <app-diretivas-atributos></app-diretivas-atributos>-->
-         <app-new-component></app-new-component>
+         <app-diretivas-atributos></app-diretivas-atributos>      
+         <app-new-component></app-new-component>-->   
+
+         <app-input [contador]="addValue"></app-input>
+         <br>
+         <button (click)="add()">Add</button>
          <router-outlet></router-outlet>`
 })
 
 export class AppComponent implements OnInit {
   
+  public addValue: number = 0;
+
   constructor(){ }
     ngOnInit(): void {
      
@@ -24,6 +30,8 @@ export class AppComponent implements OnInit {
        },1000)
     }
 
-
+  public add(){
+      this.addValue++;    
+  }
 
 }
