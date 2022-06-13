@@ -27,10 +27,34 @@ export class FoodListComponent implements OnInit {
       next: (res: any) => {
         alert(`Olha voce add => ${res.nome}`);
         return this.foodList.push(res);
-      }
-     
-    })
+      }     
+    });
+  }
+
+  public foodListEdit(nome: string, id: number) {
+    this.foodListService.foodListEdit(nome,id).subscribe(
+      res => {
+        return console.log(res)
+      },
+      error => error
+    )
+  }
+
+    public foodListDelete( id: number){
+      return this.foodListService.foodListDelete(id).subscribe(
+        res => {
+              this.foodList = this.foodList.filter(
+                item=> {
+                  return id !== item.id
+                }
+              )
+        },
+        error => error
+      )
+    }  
 
   }
 
-}
+
+
+
