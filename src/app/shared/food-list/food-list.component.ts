@@ -10,7 +10,7 @@ import { FoodListService } from 'src/app/services/food-list.service';
 })
 export class FoodListComponent implements OnInit {
 
-  public foodList: FoodList | any;
+  public foodList: Array<FoodList>=[];
 
   constructor(private foodListService:  FoodListService) { }
 
@@ -24,8 +24,11 @@ export class FoodListComponent implements OnInit {
     //this.foodListService.emitEvent.subscribe(res => alert(`Olha voce add => ${res}`));
 
     this.foodListService.emitEvent.subscribe({
-      next: (res: any) => alert(`Olha voce add => ${res}`),
-      error: (err: any) => console.log(err),
+      next: (res: any) => {
+        alert(`Olha voce add => ${res.nome}`);
+        return this.foodList.push(res);
+      }
+     
     })
 
   }
