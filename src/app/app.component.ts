@@ -18,9 +18,12 @@ import { TitleStrategy } from '@angular/router';
          <ng-template [ngIf]="getDados">
           <h1>{{ getDados.nome }}  {{ getDados.idade }}</h1> 
          </ng-template>
-         <app-output (enviarDados)="setDados($event)"></app-output>--> 
+         <app-output (enviarDados)="setDados($event)"></app-output>
+
          <app-food-add></app-food-add>
-         <app-food-list></app-food-list>
+         <app-food-list></app-food-list>--> 
+
+         <app-forms> </app-forms>
          <router-outlet></router-outlet>` 
 })
 
