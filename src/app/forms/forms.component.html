@@ -1,4 +1,4 @@
-<form #form="ngForm">
+<form #form="ngForm" (ngSubmit)="submitForm(form)">
 
     Valido - {{ nome.valid }} -
     Dirty {{ nome.dirty }} -
@@ -47,7 +47,7 @@
    </select>
 
     <br><br>
-
+<button type="submit" [disabled]="form.invalid">Enviar dados</button>
 </form>
 
 {{ form.value | json }} 
